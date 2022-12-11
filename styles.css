@@ -1,0 +1,324 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    color: #fbeae2;
+    font-family: sans-serif;
+     
+}
+#main {
+    padding-top: 7em;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:min-content;
+}
+#rule-section {
+    padding-top: 7em;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: min-content;
+}
+.bg {
+    background-image: url(https://i.pinimg.com/originals/7f/f5/aa/7ff5aa2204c532c80dcc425080aeb1be.jpg);
+    background-size: cover;
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+    
+    
+}
+
+
+.titleh1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 5em 0 1em;
+     
+}
+/* .rulebutton-div {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.rulebutton-div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #762d47;
+    height: 40px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px #261935;
+    
+}
+.rulebutton-div p:hover {
+    background-color: #261935;
+    border-style: none;
+    transition: .5s;
+}
+.rule-a:hover{
+    color: #762d47;
+    transition: .4s;
+}
+.rule-a {
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+    
+} */
+
+/* Containers==============================================================================  */
+#container {
+    height: 525px;
+    width: 550px;
+    background-color: #762d47;
+    opacity: .9;
+    display: grid;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #261935;
+    margin-right: 2em;
+}
+#education-container {
+    height: 525px;
+    width: 550px;
+    background-color:#762d47;
+    opacity: .9;
+    display: grid;
+    grid-template-rows: 75px 75px 75px 75px ;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #261935;
+    
+}
+#law-container{
+    height: 525px;
+    width: 550px;
+    background-color:#762d47;
+    opacity: .9;
+    display: grid;
+    grid-template-rows: 75px 75px 75px 75px ;
+     
+     
+    padding: 25px;
+    margin-left: 2em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #261935;
+}
+#career-container{
+    height: 1525px;
+    width: 550px;
+    background-color:#762d47;
+    opacity: .9;
+    padding: 25px;
+    margin-bottom: 5em;
+    margin-left: 2em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #261935;
+}
+#rules-container {
+    height: 1525px;
+    width: 550px;
+    background-color:#762d47;
+    opacity: .9;
+    padding: 25px;
+    margin-bottom: 5em;
+    margin-left: 2em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #261935;
+}
+
+
+
+
+/* Main Section============================================================================== */
+#business-income{
+    
+    height: 25px;
+    width: 150px;
+    padding-left: 3px;
+}
+
+#Income {
+    
+    height: 25px;
+    width: 150px;
+    padding-left: 3px;
+}
+
+#passive {
+    
+    height: 25px;
+    width: 150px;
+    padding-left: 3px;
+}
+#business {
+    
+    height: 25px;
+    width: 150px;
+    padding-left: 3px;
+}
+
+#expenses {
+    
+    height: 25px;
+    width: 150px;
+    padding-left: 3px;
+}
+
+#Print {
+    
+    background-color: white;
+    height: 25px;
+    width: 150px;
+    padding-left: 3px;
+}
+.container-1-button {
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#btn {
+    height: 25px;
+    width: auto;
+}
+#clear {
+    
+    height: 25px;
+    width: auto;
+}
+#add-btn,
+#subtract-btn {
+    
+    justify-content: center;
+    margin: 0 0 0 1em;
+    height: 25px;
+    width: 30px;
+}
+#add-input
+ {
+    height: 24px;
+    width: 30%;
+    padding-left: 3px;
+    border-radius: 5px;
+}
+#tracker {
+    width: 30px;
+    height: 24px;
+    padding-left: 3px;
+    margin-left: 3px;
+    border-radius: 5px;
+    color: blue;
+}
+#incramentlvl {
+    width: 35px;
+    height: 25px;
+}
+
+
+ /* Education section==============================================================================  */
+.edu-div {
+    display: flex;
+    align-items: center;
+}
+#education-btn {
+    height: 30px;
+    width: 30px;
+    border-radius: 20%;
+    background-color: white;
+    color: black;
+}
+#education-btn:hover{
+    background-color: lightseagreen;
+    color: black;
+    transition: .5s;
+}
+#education-input{
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    margin-left: .5em;
+}
+#eclear{
+    height: 30px;
+    width: 70px;
+    border-radius:5px;
+    margin-left: 2em;
+}
+#eclear:hover {
+    background: lightseagreen;
+    color: white;
+}
+#writing {
+    padding-left: 3px;
+}
+#dice{
+    height: 20px;
+    width: 50px;
+    
+}
+#businesslvl {
+    width: 40px;
+    height: 25px;
+}
+#businessAdd,
+#businessSubtract {
+    width: 40px;
+    height: 25px;
+    margin-left: 5px; 
+}
+.chosennumbers {
+    display:inline;
+    margin: 0 1em 0 1em;
+}
+
+/* LAW SECTION======================================================================== */
+#happinessAdd,
+#happinessSubtract,
+#loveAdd,
+#loveSubtract,
+#healthAdd,
+#healthSubtract {
+    width: 40px;
+    height: 25px;
+}
+#happinesslvl,
+#lovelvl,
+#healthlvl {
+    height: 21px;
+    padding-left: 3px;
+}
+.rollinput {
+    height: 30px;
+    width: 95%;
+    margin-bottom: 1em;
+    padding-left: 3px;
+}
+.law-h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#activity {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 1em;
+    padding-left: 3px;
+    font-size: 11px;
+}
+#dice {
+    height: 30px;
+    width: 50px;
+     
+}
+
+ 
