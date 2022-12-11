@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Income Calculator</title>
+    
+</head>
+<body>
+    <div class="bg"></div>
+    <h1 class="titleh1">Path Of Life</h1>
+    <!-- <div class="rulebutton-div">
+        <p><a class="rule-a" href="rules.html">RULES ==>>></a></p>
+    </div> -->
+     
+    <section id="main">
+        
+<!--=======================MAIN ========================================================-->
+        <div id="container">
+            <div>
+                Job Income: <input id="Income" type="number" placeholder="0">
+            </div>
+            <div>
+                Passive Income: <input id="passive" type="number" placeholder="0">
+            </div>
+            <div>
+                Expenses: <input id="expenses" type="number" placeholder="0">
+            </div>
+            <div>
+                Business Income: <input id="business" placeholder="0" ><input id="incramentlvl" disabled>
+            </div>
+            <div>
+                Cash: <input id="Print" type="number" placeholder="0" disabled>
+            </div>
+            <div>
+                Business Stats: <input id="business-income" type="number" placeholder="0" disabled>
+            </div>
+            <button id="btn" onclick="calculate()">Payday</button>
+            
+            <button id="clear">Clear</button>
+            <div>
+                <input id="add-input" placeholder="Add/Subtract"><button id="subtract-btn" onclick="add()">+</button><button id="add-btn" onclick="subtract()">-</button>Paydays<input disabled id="tracker">
+            </div>
+            
+        </div>
+
+
+
+
+
+<!-- Education ==============================================================================  -->
+        <div id="education-container">
+            <div class="edu-div">
+                <p>Education points</p>
+                <button id="education-btn" onclick="epoint()">+1</button>
+                <input id="education-input" placeholder="0">
+                <button id="eclear" onclick="eclear()">Clear</button>
+            </div>
+            <div class="edu-div">
+                Job Level: <input placeholder="ex: lvl 1">
+            </div>
+            <div class="edu-div">
+                Business Level: <input placeholder="0" disabled id="businesslvl"><button id="businessAdd" onclick="businessAdd()">+</button><button id="businessSubtract" onclick="businessSubtract()">-</button>
+            </div>
+            <div>
+                <textarea placeholder="Random Notes... Books etc..." name="writing" id="writing" cols="41" rows="4"></textarea>
+            </div>
+             
+            <div>
+                Did you pay expenses this round?
+                <label><input type="radio" name="payday" class="radio" > yes</label>
+    
+                <label><input type="radio" name="payday" class="radio"> No </label>
+    
+            </div>
+            <div>
+                What will be your Chosen Numbers?
+                
+            </div>
+            <div>
+                <label><input type="checkbox" class="chosennumbers">1</label>
+                <label><input type="checkbox" class="chosennumbers">2</label>
+                <label><input type="checkbox" class="chosennumbers">3</label>
+                <label><input type="checkbox" class="chosennumbers">4</label>
+                <label><input type="checkbox" class="chosennumbers">5</label>
+                <label><input type="checkbox" class="chosennumbers">6</label>
+            </div>
+        </div>
+        <!-- LAW CONTAINER ======================================================================= -->
+        <div id="law-container">
+            <div class="edu-div">
+                Happiness: <input placeholder="5" id="happinesslvl" disabled><button id="happinessAdd" onclick="happinessAdd()">+</button><button id="happinessSubtract" onclick="happinessSubtract()">-</button>
+            </div>
+            <div class="edu-div">
+                Love: <input placeholder="5" id="lovelvl" disabled><button id="loveAdd" onclick="loveAdd()">+</button><button id="loveSubtract" onclick="loveSubtract()">-</button>
+            </div>
+            <div class="edu-div">
+                Health: <input placeholder="5" id="healthlvl" disabled><button id="healthAdd" onclick="healthAdd()">+</button><button id="healthSubtract" onclick="healthSubtract()">-</button>
+            </div>
+            <div>
+                Dice: <button id="dice" onclick="dice()">Roll</button> <input id="dice-result" placeholder="0">
+            </div>
+            <div class="law-h1">
+                <h1>Category</h1>
+            </div>
+             
+            <div>
+                <input class="rollinput" id="opportunity-result" disabled>
+            </div>
+            <div class="law-h1">
+                <h1>Activity: </h1>
+            </div>
+            <div>
+                <input class="rollinput" id="activity" disabled>
+            </div>
+        </div>
+    </section>
+    <!-- RULES============================================================================= -->
+    <section id="rule-section">
+        <div id="rules-container">
+            <h1>Welcome to Path Of Life!</h1>
+            <p>Where you will try to reach ULTIMATE life status among your peers.</p>
+            <p>The goal of the game is to be the first one to max out your Happiness, Love, Health, 
+                and reach $5000 in passive income!
+            </p>
+            <br>
+            <h1>How to play?</h1>
+            <p>1.) To get started you must first roll the dice. Whichever number it lands on will 
+                determine how your career begins!
+            </p>
+            <p>2.) Once everyone has rolled for how their careers will begin, Choose someone to go first.</p>
+            <p>3.) Whoevers turn it's on will roll the dice and only the people has the rolled number as 
+                one of their Chosen Numbers will be able to take part in the Activity if they choose to. 
+            </p>
+            <p>4.) Once everyone has gone once and it comes back to the first players turn, it will now
+                be Payday. Paydays only occur on the first players turn. Every other turn however will be Payday 
+                and Expense day. Expense day is that time of the month where you have to pay $600 for your 
+                bills(can be paid off. Check Expenses).
+            </p>
+            <br>
+            <p>That is all there is to it! You continue to do this until someone wins the game!</p>
+            <br>
+            <p>Everytime you pay and go into debt, that payment is Multiplied by 2.</p>
+            <br>
+            <p>1 = <i>Part Time Wendy's Cashier.</i> $1000 paycheck. 3/6 Opportunity Cost</p>
+            <p>2 = <i>Part Time Worker/Learner</i> = $500 paycheck. . 2/6 Opportunity Cost(at all levels)</p>
+            <p>3 = <i>Gambler</i>  = $100-$600 per roll depending on your roll. (2=$200 etc). 4/6 Opportunity Cost</p>
+            <p>4 = <i>Uber</i>  = $700 paycheck. 4/6 Opportunity Cost</p>
+            <p>5 = <i>Full Time Assembly-Line</i>  = $1400 paycheck. 2/6 Opportunity Cost</p>
+            <p>6 = <i>Full Time Learner</i>  = $0 Paycheck. +1 extra education every paycheck! 3/6 Opportunity Cost</p>
+            <br>
+            <h1>What are Opportunity Costs, Activities, and Education Points?</h1>
+            <p>Opportunity Cost:</p>
+            <p>Opportunity Cost is what allows you to take part in Activities. Activities are 
+                the events in which you gain Happiness, Love, and Health. Activities also allow
+                you to take part in Wealth Opportunities that can bring you in a lot of money.
+            </p>
+            <br>
+            <p>Activities occur every round but you're only allowed to take part in it if the Dice
+                lands on one of your chosen numbers. 
+            </p>
+            <br>
+            <p>You choose your chosen numbers from 1-6 depending on your Opportunity Cost.
+                4/6 Opportunity Cost allows you to choose 4 numbers on the Dice to be the numbers
+                that allow you to take part in Activities. (ex.4/6 allows you to choose 2,4,5,6(any numbers 1-6)).
+                You can only change your chosen numbers whenever your Opportunity Cost changes. Opportunity
+                Cost can change when you change careers. 
+            </p>
+            <br>
+            <p>Education Points:</p>
+            <p>Education Points allow you to level up into different careers(max 4), unlock books, or level up your business. </p>
+            <p>You gain an Education Point every paycheck and need a certain amount of
+                points for different upgrades you want. Every upgrade in your career or business
+                can be upgraded once more for the same amount of points. 
+            </p>
+            <br>
+            <p>Careers can only be upgraded 4 times max.</p>
+            <p>Books can only be learned once.</p>
+            <p>Business' can be upgraded infinitely.</p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div id="career-container">
+            <div>
+                <h1>Careers</h1>
+            </div>
+            <p>College-</p>
+            <p>You can always go back to being a Full Timer Learner.</p>
+            <p>You can do all of these jobs Part time. Salery -50%</p>
+            <p>(Ex. $2000-$5000-$10,000 = lvl 1- lvl 2- lvl 3)</p>
+            <p>lvl 1 = 2/6 Opportunity Cost. lvl 2 = 3/6, lvl 3 = 4/6, lvl 4 = 5/6</p>
+            <br>
+            <p>Doctor = 11 education points. 3 levels. $2000-$5000-$10,000.</p>
+            <p>Engineer = 9 education points. 3 levels. $1400-$3000-$7000.</p>
+            <p>IT = 9 education points. 3 levels. $1400-$3000-$7000.</p>
+            <p>Politics = 11 education points. 3 levels. $2000-$5000-$10,000.</p>
+            <p>Social Work = 9 education points. 3 levels. $1400-$3000-$7000.</p>
+            <p>Law School = 11 education points. 3 levels. $2000-$5000-$10,000.</p>
+            <p>Teacher = 6 education points. 3 levels. $1400-$2000-$4000.</p>
+            <br>
+            <p>Trade School-  </p>
+            <p>Plumber = 7 education points. 3 levels. $1400-$2200-$4400.</p>
+            <p>Electrician = 7 education points. 3 levels. $1400-$2200-$4400.</p>
+            <p>Beauty = 5 education points. 3 levels. $1400-$2000-$3400.</p>
+            <p>Barber = 5 education points. 3 levels. $1400-$2000-$3400.</p>
+            <br>
+            <p>All levels are 4/6 Opportunity cost for these careers</p>
+            <p>Youtuber = 7 education points. 3 levels. $100-$600 * (2 + level every turn).</p>
+            <p>Streamer = 7 education points. 3 levels. $100-$600 * (2 + level every turn).</p>
+            <p>Gamer = 7 education points. 3 levels. $100-$600 * (2 + level every turn).</p>
+            <p>Artist = 7 education points. 3 levels. $100-$600 * (2 + level every turn).</p>
+            <p>Music Artist = 7 education points. 3 levels. $100-$600 * (2 + level every turn).</p>
+            <br>
+            <p>lvl 1 = Bachelors degree 2/6</p>
+            <p>lvl 2 = Masters degree 3/6</p>
+            <p>lvl 3 = PHD 4/6</p>
+            <p>Lvl 4 = CEO 5/6</p>
+            <p>You can reach level 4 of any career. !!! Requires Entrepreneurship Points and 10 Education Points !!!</p>
+            <p>lvl 4 PERKS- x2 income for everything + Categories. gain 1/6 Opportunity cost.</p>
+            <br>
+            <h1>Books</h1>
+            <p>10 E points = Read "How to learn". Learning progress is +1 extra education point every Expense day. Lvl 4 Eligability.</p>
+            <p>7 E points = Read "How to live my life". Gain +1 Health, Happiness, OR Love every Expense day.</p>
+            <p>5 E points = Read a Character growth book. +1 Happiness everytime you gain happiness.</p>
+            <p>5 E points = Read a Neutrition Book. +1 health everytime you gain health.</p>
+            <p>5 E points = Read a Romantic Love Book. +1 Love everytime you gain love.</p>
+            <p>7 E points = Read a Business Book. +1 education for business everytime you gain an business education point. </p>
+            <br>
+            <h1>Expenses</h1>
+            <p>Car payment- 5,000 to pay off</p>
+            <p>-$200 every Expense Day</p>
+            <p>House payment-$5,000 to pay off</p>
+            <p>-$200 every Expense Day</p>
+            <p>Student loans- $5,000 to pay off</p>
+            <p>-$200 every Expense Day</p>
+            <br>
+            <h1>How Does A business Work?</h1>
+            <br>
+            <p>6 education points to start a business.</p>
+            <p>You start out at an extra $50 a paycheck. Every paycheck you gain an extra $20*(Business lvl) for the rest of the game. $50+$20*(business lvl).</p>
+            <p>(round 10 would be $250($50+($20*10rounds)) + $20. </p>
+            <br>
+            <p>This is designed to be a potential long term play to win. Your business grows bigger over time. </p>
+            <br>
+            <p>Start a business(learner stats). 3/6 or 2/6 if part time worker. 6 education points. unlimited levels.</p>
+            <p>+50 per paycheck. Increment by $20 every paycheck.</p>
+            <p>Each level increases incrament by 10$. </p>
+            <p>pay 10k to increase inventory. +1 lvl</p>
+            <p>pay 10k for a marketing team. +1 lvl</p>
+            <p>pay 15k for a website. +1 lvl</p>
+            <p>pay 15k for a larger facility. +1 lvl</p>
+            <p>pay 20k for Sky Scraper. +2 lvl max.</p>
+            <br>
+            <h1>Perks</h1>
+            <br>
+            <p>2 Properties = +1 Health, Happiness, Love.</p>
+            <p>3 Properties = +1 Health, Happiness, Love.</p>
+            <p>4 Properties = +1 Health, Happiness, Love.
+            </p>
+        </div>
+         
+    </section>
+    
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
